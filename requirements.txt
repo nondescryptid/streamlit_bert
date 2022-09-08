@@ -17,7 +17,7 @@ cachetools==4.2.4
 certifi==2020.12.5
 cffi==1.15.0
 chardet==4.0.0
-click==8.1.2
+click
 cycler==0.10.0
 datasets==1.14.0
 debugpy==1.4.1
