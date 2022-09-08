@@ -81,12 +81,10 @@ def qna(question,source_text, no_of_answers):
     candidate_docs = get_top_k_articles(question, segmented_source, no_of_answers)
 
     # Return the likeliest answers from each of our top k most relevant documents in descending order
-    print("Here are our top 3 answers")
     for doc in candidate_docs:
-      answer = (answer_question(question, doc, tokenizer, model))
-      print(doc, "\n END OF DOC")
+      answer = (answer_question(question, doc, tokenizer, model))  
       answers.append(answer)
-      print(answer, "\n")
+    
   
     return answers
 
