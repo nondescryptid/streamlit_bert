@@ -1,3 +1,4 @@
+import streamlit as st
 from pydoc import Doc
 from transformers import BertTokenizer, BertForQuestionAnswering, AutoTokenizer,AutoModel, AutoModelForQuestionAnswering
 from datasets import load_dataset
@@ -5,6 +6,13 @@ import pandas as pd
 import torch
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+st.title('Answer questions with BERT!')
+
+user_text = [st.text_area("Enter the text you'd like to retrieve information from")]
+user_qn = st.text_input("Enter your question")
+
+
 def answer_question(question, answer_text, tokenizer, model):
     input_ids = tokenizer.encode(question, answer_text, max_length=512,
                                  truncation=True)
@@ -126,3 +134,7 @@ def get_top_k_articles(query, docs, k):
     top_docs = [docs[x] for x in top_doc_indices]
     print("TOP DOCs: ", top_docs)
     return top_docs
+
+if st.button("Let's go"):
+  result = qna(user_qn, user_text, 1)
+  st.write("Your answer: ", result[0])
