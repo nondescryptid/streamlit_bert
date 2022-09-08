@@ -36,7 +36,7 @@ fsspec==2021.10.1
 gitdb==4.0.9
 GitPython==3.1.24
 gunicorn==20.0.4
-huggingface-hub<0.1.0, >-0.0.19
+huggingface-hub<0.1.0, >=0.0.19
 idna==2.10
 importlib-metadata==4.11.3
 importlib-resources==5.4.0
@@ -120,7 +120,7 @@ torch==1.10.0
 tornado==6.1
 tqdm==4.62.3
 traitlets==5.0.5
-transformers==4.12.3
+transformers>=4.0
 typing-extensions==3.10.0.2
 tzdata==2021.5
 tzlocal==4.1
