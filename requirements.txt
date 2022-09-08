@@ -97,7 +97,7 @@ pytz==2020.5
 pytz-deprecation-shim==0.1.0.post0
 PyYAML==6.0
 pyzmq==22.2.1
-redis==4.3.4
+redis
 regex==2020.11.13
 requests==2.25.1
 sacremoses==0.0.46
