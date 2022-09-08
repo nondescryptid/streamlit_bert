@@ -7,8 +7,9 @@ import torch
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import logging
-#  Disable warnings about overflowing tokens
-logging.disable(logging.WARNING)
+
+transformers.logging.set_verbosity_error()
+
 
 st.title('Answer questions with BERT!')
 st.write("This is a simple interface to enter text and ask questions, using functions written by Chris McCormick in his [How to Build Your Own Question Answering System](https://mccormickml.com/2021/05/27/question-answering-system-tf-idf/) article that you should definitely check out if you'd like to learn more about what happens under the hood.")
