@@ -1,14 +1,14 @@
 import streamlit as st
 from pydoc import Doc
-from transformers import BertTokenizer, BertForQuestionAnswering, AutoTokenizer,AutoModel, AutoModelForQuestionAnswering
+from transformers import BertTokenizer, BertForQuestionAnswering, AutoTokenizer,AutoModel, AutoModelForQuestionAnswering, logging
 from datasets import load_dataset
 import pandas as pd
 import torch
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import logging
 
-transformers.logging.set_verbosity_error()
+
+logging.set_verbosity_error()
 
 
 st.title('Answer questions with BERT!')
